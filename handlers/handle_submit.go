@@ -10,9 +10,20 @@ func PrintInputValues(form *tview.Form, textView *tview.TextView) {
 	headers := form.GetFormItemByLabel("Headers").(*tview.TextArea).GetText()
 	body := form.GetFormItemByLabel("Body").(*tview.TextArea).GetText()
 
-	//textView.SetText(headers)
-	//services.GetRequest(url, headers, textView)
-	//services.PostRequest(url, headers, body, textView)
-	//services.PatchRequest(url, headers, body, textView)
-	services.DeleteRequest(url, headers, body, textView)
+	dropdown := form.GetFormItemByLabel("Method").(*tview.DropDown)
+	_, method := dropdown.GetCurrentOption()
+	
+	switch method {
+	case "GET":
+		services.GetRequest(url, headers, textView)
+	case "POST":
+		services.PostRequest(url, headers, body, textView)
+	case "PATCH":
+		services.PatchRequest(url, headers, body, textView)
+	case "DELETE":
+		services.DeleteRequest(url, headers, body, textView)
+	default:
+		textView.SetText("Invalid method selected")
+	}
+	
 }
