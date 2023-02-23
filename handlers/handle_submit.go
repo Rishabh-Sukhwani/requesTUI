@@ -12,5 +12,6 @@ func PrintInputValues(form *tview.Form, textView *tview.TextView) {
 
 	//textView.SetText(headers)
 	//services.GetRequest(url, headers, textView)
-	services.PostRequest(url, headers, body, textView)
+	//services.PostRequest(url, headers, body, textView)
+	services.PatchRequest(url, headers, body, textView)
 }
