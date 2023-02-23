@@ -31,7 +31,7 @@ func RunUI() {
 			AddItem(textView, 0, 4, false)
 
 
-	form.SetBorder(true).SetTitle("POSTMAN").SetTitleAlign(tview.AlignCenter)
+	form.SetBorder(true).SetTitle("requesTUI").SetTitleAlign(tview.AlignCenter)
 	textView.SetTitle("RESPONSE:").SetTitleAlign(tview.AlignCenter)
 	if err := app.SetRoot(flex, true).EnableMouse(true).Run(); err != nil {
 		panic(err)
