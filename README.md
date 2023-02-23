@@ -1,5 +1,7 @@
 # requesTUI
 
+![preview of requesTUI](https://github.com/Rishabh-Sukhwani/requesTUI/blob/main/images/preview.png?raw=true)
+
 A pseudo-postman-like TUI written in Go for API testing and sending http requests directly from your terminal
 
 ## Installation
